@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ span{
+   color:blue;
+ }
+ input[type=text] {
+  border: 2px solid rgb(129, 34, 2);
+  border-radius: 6px;
+}
+input[type=email] {
+  border: 2px solid rgb(129, 34, 2);
+  border-radius: 6px;
+}
+input[type=phone] {
+  border: 2px solid rgb(129, 34, 2);
+  border-radius: 6px;
+}
+textarea{
+  border: 2px solid rgb(129, 34, 2);
+  border-radius: 6px;
+}
+body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        html {
+  height:100%;
+}
+
+body {
+  margin:0;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+       
+
+td{
+  font-weight: bold;
+}
+#but{
+  background-color: rgb(3, 108, 150);
+  font-weight: bold;
+  border-radius: 20%;
+  font-size: large;
+}
+table{
+  margin:20px;
+  padding:10px;
+  width:50%;
+  border:solid green;
+  background-color: rgb(246, 255, 127);
+}
+    </style>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="maincss.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <ul>
+        <br>
+        <li><img id ="i"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQINEvBHF1ddAYgCyDPeHDzwI2hZ7V7rPfpjg&usqp=CAU" width="70" height="70">  
+        <br clear=right><p style="font-size:large;color: rgb(231, 231, 20); font-weight: bold;"> ALEX BANK</p></li><br>
+      <li><a href="Main.html">Home</a></li>
+      <li><a href="About1.html">About Us</a></li>
+      <li><a href="Customer.html">Customer</a></li>
+      <li><a href="transfer.html">Transfer Money</a></li>
+      <li><a href="contact1.html">Contact</a></li>
+  
+    </ul>
+    <br>
+    <br>
+    <div class="c">
+    <table>
+      <center> <b>Contact Us</b></center> 
+      <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
+
+<script>
+  function P(){
+   var Name=document.getElementById("fname").value;
+   var mail=document.getElementById("mail").value;
+   var Phone=document.getElementById("phone").value;
+   var comment=document.getElementById("com").value;
+      if(Name=="" || Phone==""||mail==""||comment=="" ){
+          //alert("Name and password cannot be blank");
+          document.getElementById("a").innerHTML = "**Enter your name!";  
+  
+          document.getElementById("b").innerHTML = "**Enter your email!";  
+          document.getElementById("c").innerHTML = "**Enter your PhoneNumber!";  
+          document.getElementById("d").innerHTML = "**Comment";  
+      }
+      
+      else {
+          alert("Submitted successfully!!");
+      }
+
+        
+  }
+   
+
+</script>
+
+
+<table>
+<form>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+        <tr>
+         <td><label for="fname">Full Name</label> </td>
+        <td><input type="text" name="fname" id="fname" placeholder="Enter Name.."><span id="a"></span></td>
+        </tr>
+        <tr>
+        <td><label for="mail">Email</label> </td>
+        <td><input type="email" name="mail" id="mail" placeholder="email@example.com"><span id="b"></span></td>
+        </tr>
+        <tr>
+        <td><label for="pnum">Phone number</label> </td>
+        <td>
+        <input type="phone" name="phone" placeholder="xxx-xx-xx"id="phone"><span id="c"></span></td>
+        </tr>
+       
+          <tr>
+        <td><label>Comment</label></td>
+           <td><textarea rows="5" cols="20" placeholder="Your comment" id="com"></textarea> <span id="d"></span></td> 
+        </tr>
+        
+        <td><input id="but"type="button" value="Submit" onclick="P()"></td>  
+        </tr>
+        </form> 
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+</body>
+</html>
